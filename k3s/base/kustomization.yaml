@@ -1,0 +1,5 @@
+namespace: mysterium
+resources:
+  - mysterium.yaml
+  - service.yml
+

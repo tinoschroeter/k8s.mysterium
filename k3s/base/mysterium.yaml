@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: mysterium-app
+  name: mysterium
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysterium-app
+  template:
+    metadata:
+      labels:
+        app: mysterium-app
+    spec:
+      containers:
+      - name: mysterium.yaml
+        image: mysteriumnetwork/myst:1.2.2-alpine
+        resources:
+          requests:
+            memory: "50Mi"
+            cpu: "30m"
+          limits:
+            memory: "64Mi"
+            cpu: "400m"
+      nodeSelector:
+        arch: arm64
