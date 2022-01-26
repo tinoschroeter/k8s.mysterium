@@ -2,3 +2,4 @@ apiVersion: skaffold/v1
 kind: Config
 deploy:
   kustomize: {}
+
