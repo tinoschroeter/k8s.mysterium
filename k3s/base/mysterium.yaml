@@ -15,7 +15,7 @@ spec:
         app: mysterium-app
     spec:
       containers:
-      - name: mysterium.yaml
+      - name: mysterium
         image: mysteriumnetwork/myst:1.2.2-alpine
         resources:
           requests:
