@@ -1,5 +1,6 @@
 namespace: mysterium
 resources:
   - mysterium.yaml
+  - oauth2-service.yaml
   - service.yml
 
