@@ -17,7 +17,7 @@ spec:
       containers:
       - name: mysterium
         image: mysteriumnetwork/myst:1.2.2-alpine
-        command: ["myst", "service", " --agreed-terms-and-conditions"]
+        command: ["myst", "service", "--agreed-terms-and-conditions"]
         resources:
           requests:
             memory: "50Mi"
