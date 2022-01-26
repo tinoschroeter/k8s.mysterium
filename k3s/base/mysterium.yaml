@@ -17,6 +17,7 @@ spec:
       containers:
       - name: mysterium
         image: mysteriumnetwork/myst:1.2.2-alpine
+        command: ["service", "--agreed-terms-and-conditions"]
         resources:
           requests:
             memory: "50Mi"
@@ -24,5 +25,12 @@ spec:
           limits:
             memory: "64Mi"
             cpu: "400m"
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/mysterium-node
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: mysterium-pvc
       nodeSelector:
         arch: arm64
